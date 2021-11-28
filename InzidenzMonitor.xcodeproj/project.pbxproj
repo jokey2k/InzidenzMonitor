@@ -20,6 +20,7 @@
 		637C58E3272C875C00895ACC /* InzidenzMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637C58E2272C875C00895ACC /* InzidenzMonitorTests.swift */; };
 		637C58ED272C875C00895ACC /* InzidenzMonitorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637C58EC272C875C00895ACC /* InzidenzMonitorUITests.swift */; };
 		637C58EF272C875C00895ACC /* InzidenzMonitorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637C58EE272C875C00895ACC /* InzidenzMonitorUITestsLaunchTests.swift */; };
+		63A3ECDE272DC083008430EB /* IncidencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A3ECDD272DC083008430EB /* IncidencesStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,8 @@
 		637C58E8272C875C00895ACC /* InzidenzMonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InzidenzMonitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		637C58EC272C875C00895ACC /* InzidenzMonitorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InzidenzMonitorUITests.swift; sourceTree = "<group>"; };
 		637C58EE272C875C00895ACC /* InzidenzMonitorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InzidenzMonitorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		63A3ECDC272DC083008430EB /* InzidenzMonitor WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InzidenzMonitor WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
+		63A3ECDD272DC083008430EB /* IncidencesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidencesStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 				637C58D8272C875C00895ACC /* Info.plist */,
 				637C58D9272C875C00895ACC /* PushNotificationPayload.apns */,
 				637C58D5272C875C00895ACC /* Preview Content */,
+				63A3ECDD272DC083008430EB /* IncidencesStore.swift */,
+				63A3ECDC272DC083008430EB /* InzidenzMonitor WatchKit App-Bridging-Header.h */,
 			);
 			path = "InzidenzMonitor WatchKit Extension";
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 					};
 					637C58B8272C875900895ACC = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					637C58C3272C875B00895ACC = {
 						CreatedOnToolsVersion = 13.1;
@@ -387,6 +393,7 @@
 				637C58CC272C875B00895ACC /* ContentView.swift in Sources */,
 				637C58D2272C875B00895ACC /* ComplicationController.swift in Sources */,
 				637C58CA272C875B00895ACC /* InzidenzMonitorApp.swift in Sources */,
+				63A3ECDE272DC083008430EB /* IncidencesStore.swift in Sources */,
 				637C58D0272C875B00895ACC /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -618,6 +625,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 825AVCNJ6N;
@@ -625,12 +633,19 @@
 				IBSC_MODULE = InzidenzMonitor_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "InzidenzMonitor WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.markusullmann.InzidenzMonitor.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "InzidenzMonitor WatchKit Extension/InzidenzMonitor WatchKit App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 8.0;
@@ -643,6 +658,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 825AVCNJ6N;
@@ -650,12 +666,18 @@
 				IBSC_MODULE = InzidenzMonitor_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "InzidenzMonitor WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.markusullmann.InzidenzMonitor.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "InzidenzMonitor WatchKit Extension/InzidenzMonitor WatchKit App-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 8.0;
